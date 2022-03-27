@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp_16"
+    android:orientation="vertical"
+    tools:context=".ui.on_boarding.screen_one.ScreenOneFragment"
+    tools:viewBindingIgnore="true">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/dp_24"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_screen_one" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_16"
+        android:text="@string/money_tracking"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="@string/text_screen_one"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

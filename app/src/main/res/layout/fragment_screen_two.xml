@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16"
+    tools:context=".ui.on_boarding.screen_two.ScreenTwoFragment">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/dp_24"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_screen_two" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_16"
+        android:text="@string/visualize"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="@string/text_screen_two"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
