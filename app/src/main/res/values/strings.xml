@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">AnakKostMoneyTracker</string>
+    <string name="app_name">Motrack</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_started">Get Started</string>
+    <string name="money_tracking">Money Tracking</string>
+    <string name="text_screen_one">Your Companion for Tracking all you\'re expenses, Goals, and many more</string>
+    <string name="visualize">Visualize</string>
+    <string name="text_screen_two">Use visualization to track you\'re expenses, this will help you conscious about how much money get out from your pocket</string>
+    <string name="next">Next</string>
 </resources>
