@@ -7,4 +7,11 @@
     <string name="visualize">Visualize</string>
     <string name="text_screen_two">Use visualization to track you\'re expenses, this will help you conscious about how much money get out from your pocket</string>
     <string name="next">Next</string>
+    <string name="home_button">Home Button</string>
+    <string name="article_button">Article Button</string>
+    <string name="user_button">User Button</string>
+    <string name="home">Home</string>
+    <string name="expenses">Expenses</string>
+    <string name="income">Income</string>
+    <string name="latest_activity">Latest Activity</string>
 </resources>

@@ -10,8 +10,9 @@
         <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
         <item name="colorOnSecondary">@color/secondaryTextColor</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/primaryTextColor</item>
+        <item name="android:statusBarColor">#fefefe</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowBackground">#fefefe</item>
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/poppins_medium</item>
         <item name="android:textColor">@color/secondaryTextColor</item>
