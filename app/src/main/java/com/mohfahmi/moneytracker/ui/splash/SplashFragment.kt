@@ -1,5 +1,6 @@
 package com.mohfahmi.moneytracker.ui.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.mohfahmi.moneytracker.R
-import com.mohfahmi.moneytracker.ui.splash.SplashFragmentDirections.actionSplashFragmentToHomeFragment
+import com.mohfahmi.moneytracker.ui.MainActivity
 import com.mohfahmi.moneytracker.ui.splash.SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment
 import com.mohfahmi.moneytracker.view_models.SplashViewModel
 import kotlinx.coroutines.Dispatchers
@@ -37,7 +38,10 @@ class SplashFragment : Fragment() {
             withContext(Dispatchers.Main) {
                 viewModel.readOnBoardingState().observe(viewLifecycleOwner) { state ->
                     if (state) {
-                        findNavController().navigate(actionSplashFragmentToHomeFragment())
+                        requireActivity().startActivity(
+                            Intent(requireContext(), MainActivity::class.java)
+                        )
+                        requireActivity().finish()
                     } else {
                         findNavController().navigate(actionSplashFragmentToOnBoardingFragment())
                     }

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/btn_article" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/user"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/btn_user" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/end"
+        motion:duration="500">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/btn_home" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/user"
+        motion:constraintSetStart="@id/end"
+        motion:duration="500">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/btn_user" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/user"
+        motion:duration="500">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/btn_article" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/user"
+        motion:duration="500">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/btn_home" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="60dp"
+            motion:layout_constraintStart_toStartOf="@+id/btn_article"
+            motion:layout_constraintBottom_toBottomOf="@+id/btn_article"
+            motion:layout_constraintEnd_toEndOf="@+id/btn_article"
+            android:layout_width="70dp"
+            android:id="@+id/imageView"
+            motion:layout_constraintTop_toBottomOf="@+id/container_main" />
+        <Constraint
+            android:id="@+id/btn_home"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:tint="@color/primaryColor"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/btn_article"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dp_8"
+            motion:layout_constraintTop_toBottomOf="@+id/container_main"
+            motion:layout_constraintHorizontal_bias="0.5" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/user" >
+        <Constraint
+            android:layout_height="60dp"
+            motion:layout_constraintStart_toStartOf="@+id/btn_user"
+            motion:layout_constraintBottom_toBottomOf="@id/btn_home"
+            motion:layout_constraintEnd_toEndOf="@+id/btn_user"
+            android:layout_width="70dp"
+            android:id="@+id/imageView" />
+    </ConstraintSet>
+</MotionScene>

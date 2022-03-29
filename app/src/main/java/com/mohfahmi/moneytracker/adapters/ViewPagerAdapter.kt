@@ -5,14 +5,14 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class OnBoardingViewPagerAdapter(
-    private val onBoardingScreens: ArrayList<Fragment>,
+class ViewPagerAdapter(
+    private val fragmentScreens: ArrayList<Fragment>,
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle
 ) : FragmentStateAdapter(fragmentManager, lifecycle) {
 
-    override fun getItemCount(): Int = onBoardingScreens.size
+    override fun getItemCount(): Int = fragmentScreens.size
 
-    override fun createFragment(position: Int): Fragment = onBoardingScreens[position]
+    override fun createFragment(position: Int): Fragment = fragmentScreens[position]
 
 }
