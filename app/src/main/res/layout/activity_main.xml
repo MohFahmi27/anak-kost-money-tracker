@@ -41,7 +41,7 @@
         android:layout_marginBottom="@dimen/dp_8"
         android:background="@android:color/transparent"
         android:contentDescription="@string/home_button"
-        android:src="@drawable/ic_home_white"
+        android:src="@drawable/ic_home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_article"
         app:layout_constraintHorizontal_bias="0.5"

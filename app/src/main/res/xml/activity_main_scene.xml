@@ -6,7 +6,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="500">
+        motion:duration="200">
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/btn_article" />
@@ -15,7 +15,7 @@
     <Transition
         motion:constraintSetEnd="@+id/user"
         motion:constraintSetStart="@id/start"
-        motion:duration="500">
+        motion:duration="200">
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/btn_user" />
@@ -24,7 +24,7 @@
     <Transition
         motion:constraintSetEnd="@+id/start"
         motion:constraintSetStart="@id/end"
-        motion:duration="500">
+        motion:duration="200">
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/btn_home" />
@@ -33,7 +33,7 @@
     <Transition
         motion:constraintSetEnd="@+id/user"
         motion:constraintSetStart="@id/end"
-        motion:duration="500">
+        motion:duration="200">
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/btn_user" />
@@ -42,7 +42,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/user"
-        motion:duration="500">
+        motion:duration="200">
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/btn_article" />
@@ -51,7 +51,7 @@
     <Transition
         motion:constraintSetEnd="@+id/start"
         motion:constraintSetStart="@id/user"
-        motion:duration="500">
+        motion:duration="200">
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/btn_home" />
