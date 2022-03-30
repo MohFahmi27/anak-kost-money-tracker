@@ -7,16 +7,19 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".ui.MainActivity">
 
-    <androidx.viewpager2.widget.ViewPager2
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/vp_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        app:navGraph="@navigation/nav_main" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"

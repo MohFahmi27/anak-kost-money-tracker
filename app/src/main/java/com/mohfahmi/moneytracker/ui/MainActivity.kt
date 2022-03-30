@@ -6,11 +6,9 @@ import android.view.MotionEvent
 import android.view.View
 import android.viewbinding.library.activity.viewBinding
 import androidx.appcompat.app.AppCompatActivity
-import com.mohfahmi.moneytracker.adapters.ViewPagerAdapter
+import androidx.navigation.findNavController
+import com.mohfahmi.moneytracker.R
 import com.mohfahmi.moneytracker.databinding.ActivityMainBinding
-import com.mohfahmi.moneytracker.ui.article.ArticleFragment
-import com.mohfahmi.moneytracker.ui.home.HomeFragment
-import com.mohfahmi.moneytracker.ui.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by viewBinding()
@@ -24,16 +22,11 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("ClickableViewAccessibility")
     private fun bindViews() {
         with(binding) {
-            vpMain.isUserInputEnabled = false
-            vpMain.adapter = ViewPagerAdapter(
-                arrayListOf(HomeFragment(), ArticleFragment(), ProfileFragment()),
-                supportFragmentManager,
-                lifecycle
-            )
-
-            btnHome.setOnClick { vpMain.currentItem = 0 }
-            btnArticle.setOnClick { vpMain.currentItem = 1 }
-            btnUser.setOnClick { vpMain.currentItem = 2 }
+            btnHome.setOnClick {
+                vpMain.findNavController().navigate(R.id.homeFragment)
+            }
+            btnArticle.setOnClick { vpMain.findNavController().navigate(R.id.articleFragment) }
+            btnUser.setOnClick { vpMain.findNavController().navigate(R.id.profileFragment) }
         }
     }
 
