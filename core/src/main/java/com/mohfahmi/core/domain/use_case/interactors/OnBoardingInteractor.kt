@@ -13,4 +13,10 @@ class OnBoardingInteractor(private val dataStoreRepository: DataStoreRepository)
             dataStoreRepository.saveOnBoardingStateToDataStore(state)
         }
     }
+
+    override fun saveUserName(name: String, coroutineScope: CoroutineScope) {
+        coroutineScope.launch(Dispatchers.IO) {
+            dataStoreRepository.saveNameUserToDataStore(name)
+        }
+    }
 }
