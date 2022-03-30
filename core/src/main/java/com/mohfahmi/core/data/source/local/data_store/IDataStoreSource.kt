@@ -5,4 +5,6 @@ import kotlinx.coroutines.flow.Flow
 interface IDataStoreSource {
     suspend fun saveOnBoardingState(state: Boolean)
     fun readOnBoardingState(): Flow<Boolean>
+    suspend fun saveNameUser(name: String)
+    fun readNameUser(): Flow<String>
 }

@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.mohfahmi.core.domain.utils.UserState
 import com.mohfahmi.moneytracker.R
 import com.mohfahmi.moneytracker.ui.MainActivity
 import com.mohfahmi.moneytracker.ui.splash.SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment
+import com.mohfahmi.moneytracker.ui.splash.SplashFragmentDirections.actionSplashFragmentToWelcomeFragment
 import com.mohfahmi.moneytracker.view_models.SplashViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -37,13 +39,22 @@ class SplashFragment : Fragment() {
             delay(3000L)
             withContext(Dispatchers.Main) {
                 viewModel.readOnBoardingState().observe(viewLifecycleOwner) { state ->
-                    if (state) {
-                        requireActivity().startActivity(
-                            Intent(requireContext(), MainActivity::class.java)
+                    when (state) {
+                        UserState.OnBoarding -> findNavController().navigate(
+                            actionSplashFragmentToOnBoardingFragment()
                         )
-                        requireActivity().finish()
-                    } else {
-                        findNavController().navigate(actionSplashFragmentToOnBoardingFragment())
+                        UserState.Welcome -> findNavController().navigate(
+                            actionSplashFragmentToWelcomeFragment()
+                        )
+                        UserState.Menu -> {
+                            requireActivity().startActivity(
+                                Intent(
+                                    requireContext(),
+                                    MainActivity::class.java
+                                )
+                            )
+                            requireActivity().finish()
+                        }
                     }
                 }
             }

@@ -10,4 +10,10 @@ class DataStoreRepositoryImpl(private val dataStoreSource: IDataStoreSource) : D
 
     override fun readOnBoardingStateFromDataStore(): Flow<Boolean> =
         dataStoreSource.readOnBoardingState()
+
+    override suspend fun saveNameUserToDataStore(name: String) {
+        dataStoreSource.saveNameUser(name)
+    }
+
+    override fun readNameUserFromDataStore(): Flow<String> = dataStoreSource.readNameUser()
 }

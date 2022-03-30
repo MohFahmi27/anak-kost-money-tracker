@@ -6,4 +6,5 @@ import com.mohfahmi.core.domain.use_case.OnBoardingUseCase
 
 class OnBoardingViewModel(private val onBoardingUseCase: OnBoardingUseCase): ViewModel() {
     fun saveState(state: Boolean) = onBoardingUseCase.saveState(state, viewModelScope)
+    fun saveUserName(name: String) = onBoardingUseCase.saveUserName(name, viewModelScope)
 }

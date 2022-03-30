@@ -1,16 +1,16 @@
 package com.mohfahmi.moneytracker.ui.on_boarding
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.viewbinding.library.fragment.viewBinding
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.mohfahmi.moneytracker.R
 import com.mohfahmi.moneytracker.adapters.ViewPagerAdapter
 import com.mohfahmi.moneytracker.databinding.FragmentOnBoardingBinding
-import com.mohfahmi.moneytracker.ui.MainActivity
+import com.mohfahmi.moneytracker.ui.on_boarding.OnBoardingFragmentDirections.actionOnBoardingFragmentToWelcomeFragment
 import com.mohfahmi.moneytracker.ui.on_boarding.screen_one.ScreenOneFragment
 import com.mohfahmi.moneytracker.ui.on_boarding.screen_two.ScreenTwoFragment
 import com.mohfahmi.moneytracker.view_models.OnBoardingViewModel
@@ -40,8 +40,7 @@ class OnBoardingFragment : Fragment(R.layout.fragment_on_boarding) {
             tvNext.setOnClickListener { vpOnboarding.currentItem += 1 }
             btnGetStarted.setOnClickListener {
                 viewModel.saveState(true)
-                requireActivity().startActivity(Intent(requireContext(), MainActivity::class.java))
-                requireActivity().finish()
+                findNavController().navigate(actionOnBoardingFragmentToWelcomeFragment())
             }
 
             viewPagerCallback()
