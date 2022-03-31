@@ -6,6 +6,7 @@ import com.mohfahmi.core.domain.repository.ActivityRepository
 import com.mohfahmi.core.domain.utils.mapToDomain
 import com.mohfahmi.core.domain.utils.mapToEntity
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.flow
 
 class ActivityRepositoryImpl(private val localDataSource: ILocalDataSource) : ActivityRepository {
@@ -16,7 +17,7 @@ class ActivityRepositoryImpl(private val localDataSource: ILocalDataSource) : Ac
     }
 
     override fun getActivityDetailData(id: Long): Flow<ActivityDomain> = flow {
-        localDataSource.getActivityDetailData(id).collect {
+        localDataSource.getActivityDetailData(id).filterNotNull().collect {
             emit(it.mapToDomain())
         }
     }
