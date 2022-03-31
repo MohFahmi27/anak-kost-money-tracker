@@ -4,8 +4,10 @@ import com.mohfahmi.core.data.repository.DataStoreRepositoryImpl
 import com.mohfahmi.core.data.source.local.data_store.DataStoreSource
 import com.mohfahmi.core.data.source.local.data_store.IDataStoreSource
 import com.mohfahmi.core.domain.repository.DataStoreRepository
+import com.mohfahmi.core.domain.use_case.HomeUseCase
 import com.mohfahmi.core.domain.use_case.OnBoardingUseCase
 import com.mohfahmi.core.domain.use_case.SplashUseCase
+import com.mohfahmi.core.domain.use_case.interactors.HomeInteractor
 import com.mohfahmi.core.domain.use_case.interactors.OnBoardingInteractor
 import com.mohfahmi.core.domain.use_case.interactors.SplashInteractor
 import com.mohfahmi.moneytracker.AppDataStore
@@ -20,4 +22,5 @@ val repositoryModule = module {
 val useCaseModule = module {
     factory<OnBoardingUseCase> { OnBoardingInteractor(get()) }
     factory<SplashUseCase> { SplashInteractor(get()) }
+    factory<HomeUseCase> { HomeInteractor(get()) }
 }

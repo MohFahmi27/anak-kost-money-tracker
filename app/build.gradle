@@ -60,6 +60,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.airbnb.android:lottie:3.4.0'
     implementation 'com.tbuonomo:dotsindicator:4.2'
+    implementation 'io.github.shashank02051997:FancyToast:2.0.1'
 
 //    testing
     testImplementation 'junit:junit:4.13.2'

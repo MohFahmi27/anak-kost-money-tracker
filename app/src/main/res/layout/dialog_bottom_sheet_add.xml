@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.add_data.AddDataDialog">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/add_activity"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/select_categories"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spn_categories"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/bg_spinner"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="@dimen/dp_8"
+        app:layout_constraintBottom_toBottomOf="@+id/spn_categories"
+        app:layout_constraintEnd_toEndOf="@+id/spn_categories"
+        app:layout_constraintTop_toTopOf="@+id/spn_categories"
+        app:srcCompat="@drawable/ic_arrow_drop_down"
+        app:tint="@color/primaryColor" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/activity_name"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/spn_categories" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_activity_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_16"
+        app:boxCornerRadiusBottomStart="@dimen/dp_16"
+        app:boxCornerRadiusTopEnd="@dimen/dp_16"
+        app:boxCornerRadiusTopStart="@dimen/dp_16"
+        app:boxStrokeColor="@color/primaryColor"
+        app:boxStrokeWidth="2dp"
+        app:endIconDrawable="@drawable/ic_shopping"
+        app:endIconMode="custom"
+        app:endIconTint="@color/primaryColor"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/textView5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_activity_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/amount"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/til_activity_name" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_amount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_16"
+        app:boxCornerRadiusBottomStart="@dimen/dp_16"
+        app:boxCornerRadiusTopEnd="@dimen/dp_16"
+        app:boxCornerRadiusTopStart="@dimen/dp_16"
+        app:boxStrokeColor="@color/primaryColor"
+        app:boxStrokeWidth="2dp"
+        app:endIconDrawable="@drawable/ic_money"
+        app:endIconMode="custom"
+        app:endIconTint="@color/primaryColor"
+        app:layout_constraintEnd_toStartOf="@id/guideline_center"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/activity_date"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_center"
+        app:layout_constraintTop_toBottomOf="@+id/til_activity_name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/bg_image_button"
+        android:drawableStart="@drawable/ic_date"
+        android:drawableTint="@color/primaryTextColor"
+        android:paddingStart="@dimen/dp_16"
+        android:text="@string/dd_mm_yyyy"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/til_amount"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_center"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_button_primary_color"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:layout_marginTop="@dimen/dp_24"
+        app:layout_constraintTop_toBottomOf="@id/til_amount"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:background="@drawable/bg_button_outlined_color"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
