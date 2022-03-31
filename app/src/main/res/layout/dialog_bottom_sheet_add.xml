@@ -115,7 +115,6 @@
         app:layout_constraintStart_toEndOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@+id/til_activity_name" />
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_amount"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -139,6 +138,7 @@
             android:id="@+id/tie_amount"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:hint="@string/rp"
             android:inputType="number"
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -166,6 +166,7 @@
         android:paddingStart="@dimen/dp_16"
         android:text="@string/dd_mm_yyyy"
         android:textColor="@color/primaryTextColor"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/til_amount"
         app:layout_constraintEnd_toStartOf="@+id/guideline_end"
         app:layout_constraintStart_toStartOf="@+id/guideline_center"
@@ -176,14 +177,14 @@
         android:id="@+id/btn_add"
         android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_marginTop="@dimen/dp_24"
         android:background="@drawable/bg_button_primary_color"
         android:text="@string/add"
         android:textAllCaps="false"
         android:textSize="15sp"
-        android:layout_marginTop="@dimen/dp_24"
-        app:layout_constraintTop_toBottomOf="@id/til_amount"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"/>
+        app:layout_constraintTop_toBottomOf="@id/til_amount" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_cancel"

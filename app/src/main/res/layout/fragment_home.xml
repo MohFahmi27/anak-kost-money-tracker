@@ -60,20 +60,20 @@
                     android:id="@+id/icon_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:tint="@color/primaryTextColor"
                     android:layout_marginTop="@dimen/dp_16"
+                    android:tint="@color/primaryTextColor"
                     app:layout_constraintStart_toStartOf="@id/guideline_start"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_money"/>
+                    app:srcCompat="@drawable/ic_money" />
 
                 <TextView
                     android:id="@+id/tv_hello_name"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dp_4"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginStart="@dimen/dp_4"
                     app:layout_constraintBottom_toBottomOf="@+id/icon_textview"
                     app:layout_constraintEnd_toStartOf="@+id/guideline_end"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -206,8 +206,8 @@
             android:id="@+id/rv_latest_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dp_16"
             android:layout_marginTop="@dimen/dp_16"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/items_activity_user" />
 
     </LinearLayout>

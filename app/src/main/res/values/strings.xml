@@ -20,6 +20,7 @@
     <string name="lets_go">Lets Go</string>
     <string name="insert_button">Insert Button</string>
     <string name="add_activity">Add Activity</string>
+    <string name="edit_activity">Edit Activity</string>
     <string name="select_categories">Select Categories</string>
     <string name="activity_name">Enter Activity Name</string>
     <string name="amount">Amount</string>
@@ -27,6 +28,12 @@
     <string name="dd_mm_yyyy">DD/MM/YYYY</string>
     <string name="add">Add</string>
     <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="rp">Rp</string>
+    <string name="rp_placeholder">Rp. %1$d.-</string>
+    <string name="rp_placeholder_income">+Rp. %1$d.-</string>
+    <string name="rp_placeholder_expense">-Rp. %1$d.-</string>
     <string-array name="activity_categories">
         <item>@string/expenses</item>
         <item>@string/income</item>
