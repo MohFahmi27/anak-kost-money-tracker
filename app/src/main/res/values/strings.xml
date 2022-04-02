@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Komotrack</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="get_started">Get Started</string>
+    <string name="get_started">Start</string>
     <string name="money_tracking">Money Tracking</string>
     <string name="text_screen_one">Your Companion for Tracking all you\'re expenses, Goals, and many more</string>
     <string name="visualize">Visualize</string>
@@ -39,7 +38,24 @@
     <string name="money_percentage_income">%.0f%% Income</string>
     <string name="money_percentage_expense">%.0f%% Expense</string>
     <string name="money_percentage_expense_ring">%.0f%%</string>
-    <string name="latest_news">Latest News</string>
+    <string name="latest_news">Status Now</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="screen_text_third">Make tracking easy with notification to help you to track your money flow</string>
+    <string name="you_did_a_good_job">You Did a Good Job !</string>
+    <string name="yout_did_what">Bruh, You Better than This !</string>
+    <string name="text_description_success">Making your expense lower than your income is number 1 key for managing the your money</string>
+    <string name="text_description_failed">Making your expense higher will lead to disastrous money management, be careful!</string>
+    <string name="greetings">Greetings,</string>
+    <string name="notification">Notification</string>
+    <string name="enable_or_disabled_notification">Enable or Disabled Notification</string>
+    <string name="edit_name">Edit Name</string>
+    <string name="edit_your_current_name">Edit Your Current Name</string>
+    <string name="settings">Settings</string>
+    <string name="enter_your_new_name">Input Name</string>
+    <string name="notify_content">%s, Reminder to Track Your Money Today</string>
+    <string name="notify_channel_name">Daily Reminder</string>
+    <string name="work_tag">DAILY UNIQUE WORK</string>
+
     <string-array name="activity_categories">
         <item>@string/expenses</item>
         <item>@string/income</item>

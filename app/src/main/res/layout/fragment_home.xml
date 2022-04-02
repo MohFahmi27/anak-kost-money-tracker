@@ -105,8 +105,8 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_marginTop="@dimen/dp_8"
-                            app:srcCompat="@drawable/ic_expenses"
-                            app:tint="@color/secondaryDarkColor" />
+                            app:srcCompat="@drawable/ic_shopping"
+                            app:tint="@color/secondaryColor" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -155,8 +155,8 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_marginTop="@dimen/dp_8"
-                            app:srcCompat="@drawable/ic_income"
-                            app:tint="@color/secondaryDarkColor" />
+                            app:srcCompat="@drawable/ic_expense"
+                            app:tint="@color/secondaryColor" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -198,7 +198,6 @@
             android:layout_marginStart="@dimen/dp_16"
             android:layout_marginTop="@dimen/dp_24"
             android:text="@string/latest_activity"
-            android:textColor="@color/secondaryTextColor"
             android:textSize="16sp"
             android:textStyle="bold" />
 

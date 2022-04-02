@@ -19,7 +19,11 @@
         android:id="@+id/profileFragment"
         android:name="com.mohfahmi.moneytracker.ui.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editNameDialog2"
+            app:destination="@id/editNameDialog2" />
+    </fragment>
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.mohfahmi.moneytracker.ui.article.ArticleFragment"
@@ -34,4 +38,9 @@
             android:name="id"
             app:argType="long" />
     </dialog>
+    <dialog
+        android:id="@+id/editNameDialog2"
+        android:name="com.mohfahmi.moneytracker.ui.profile.EditNameDialog"
+        android:label="dialog_bottom_sheet_edit_profile"
+        tools:layout="@layout/dialog_bottom_sheet_edit_profile" />
 </navigation>

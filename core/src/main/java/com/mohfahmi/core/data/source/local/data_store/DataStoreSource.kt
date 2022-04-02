@@ -15,6 +15,7 @@ class DataStoreSource(private val dataStore: DataStore<Preferences>) : IDataStor
     private object PreferenceKeys {
         val onBoardingStateKey = booleanPreferencesKey("on_boarding_state")
         val userNameKey = stringPreferencesKey("user_name_key")
+        val notificationKey = booleanPreferencesKey("notification_key")
     }
 
     override suspend fun saveOnBoardingState(state: Boolean) {
@@ -53,6 +54,25 @@ class DataStoreSource(private val dataStore: DataStore<Preferences>) : IDataStor
         }
         .map { value ->
             value[PreferenceKeys.userNameKey] ?: ""
+        }
+
+    override suspend fun saveNotificationState(state: Boolean) {
+        dataStore.edit { mutablePreferences ->
+            mutablePreferences[PreferenceKeys.notificationKey] = state
+        }
+    }
+
+    override fun readNotificationState(): Flow<Boolean> = dataStore.data
+        .catch { cause ->
+            if (cause is IOException) {
+                Log.d(TAG, "readNameUser: ${cause.message.toString()}")
+                emit(emptyPreferences())
+            } else {
+                throw cause
+            }
+        }
+        .map { value ->
+            value[PreferenceKeys.notificationKey] ?: false
         }
 
     companion object {

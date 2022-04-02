@@ -43,6 +43,7 @@
         android:id="@+id/materialCardView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/bg_button_primary_color"
         app:layout_constraintBottom_toBottomOf="@id/guideline_center"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
@@ -143,8 +144,8 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_margin="@dimen/dp_16"
-        android:translationZ="2dp"
         android:background="@android:color/transparent"
+        android:translationZ="2dp"
         app:layout_constraintEnd_toEndOf="@+id/materialCardView2"
         app:layout_constraintTop_toTopOf="@+id/materialCardView2"
         app:srcCompat="@drawable/ic_circle"
@@ -160,5 +161,42 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="@+id/guideline_center" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_status"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="@dimen/dp_16"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/ic_expense_lower" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:text="@string/you_did_a_good_job"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_status"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img_status"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_description_success"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_status"
+        app:layout_constraintTop_toBottomOf="@+id/tv_status"
+        app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

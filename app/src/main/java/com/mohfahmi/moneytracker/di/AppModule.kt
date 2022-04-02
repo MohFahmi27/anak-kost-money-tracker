@@ -10,4 +10,6 @@ val viewModelModule = module {
     viewModel { HomeViewModel(get()) }
     viewModel { AddDataViewModel(get()) }
     viewModel { ArticleViewModel(get()) }
+    viewModel { EditNameViewModel(get()) }
+    viewModel { ProfileViewModel(get()) }
 }

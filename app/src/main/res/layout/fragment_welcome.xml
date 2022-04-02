@@ -27,7 +27,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.65" />
 
-    <com.airbnb.lottie.LottieAnimationView
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginVertical="@dimen/dp_24"
@@ -35,9 +35,7 @@
         app:layout_constraintEnd_toStartOf="@id/guideline_end"
         app:layout_constraintStart_toEndOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/ic_welcome" />
+        app:srcCompat="@drawable/ic_welcome" />
 
     <TextView
         android:id="@+id/textView"
@@ -69,12 +67,12 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_8"
         android:hint="@string/enter_your_name"
-        app:boxCornerRadiusBottomEnd="@dimen/dp_24"
-        app:boxCornerRadiusBottomStart="@dimen/dp_24"
-        app:boxCornerRadiusTopEnd="@dimen/dp_24"
-        app:boxCornerRadiusTopStart="@dimen/dp_24"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_18"
+        app:boxCornerRadiusBottomStart="@dimen/dp_18"
+        app:boxCornerRadiusTopEnd="@dimen/dp_18"
+        app:boxCornerRadiusTopStart="@dimen/dp_18"
         app:boxStrokeColor="@color/primaryColor"
         app:boxStrokeWidth="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_lets_go"
@@ -94,8 +92,8 @@
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_lets_go"
-        android:layout_width="80dp"
-        android:layout_height="70dp"
+        android:layout_width="70dp"
+        android:layout_height="68dp"
         android:layout_marginBottom="@dimen/dp_24"
         android:background="@drawable/bg_button_primary_color"
         android:src="@drawable/ic_right"

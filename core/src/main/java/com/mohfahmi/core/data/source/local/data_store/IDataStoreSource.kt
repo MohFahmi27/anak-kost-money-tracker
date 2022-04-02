@@ -7,4 +7,6 @@ interface IDataStoreSource {
     fun readOnBoardingState(): Flow<Boolean>
     suspend fun saveNameUser(name: String)
     fun readNameUser(): Flow<String>
+    suspend fun saveNotificationState(state: Boolean)
+    fun readNotificationState(): Flow<Boolean>
 }
