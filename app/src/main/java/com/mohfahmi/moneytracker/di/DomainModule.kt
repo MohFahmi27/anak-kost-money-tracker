@@ -27,4 +27,6 @@ val useCaseModule = module {
     factory<HomeUseCase> { HomeInteractor(get(), get()) }
     factory<AddUseCase> { AddInteractor(get()) }
     factory<ArticleUseCase> { ArticleInteractor(get()) }
+    factory<EditNameUseCase> { EditNameInteractor(get()) }
+    factory<ProfileUseCase> { ProfileInteractor(get()) }
 }

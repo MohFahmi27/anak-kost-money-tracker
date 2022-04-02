@@ -12,6 +12,7 @@ import com.mohfahmi.moneytracker.adapters.ViewPagerAdapter
 import com.mohfahmi.moneytracker.databinding.FragmentOnBoardingBinding
 import com.mohfahmi.moneytracker.ui.on_boarding.OnBoardingFragmentDirections.actionOnBoardingFragmentToWelcomeFragment
 import com.mohfahmi.moneytracker.ui.on_boarding.screen_one.ScreenOneFragment
+import com.mohfahmi.moneytracker.ui.on_boarding.screen_third.ScreenThirdFragment
 import com.mohfahmi.moneytracker.ui.on_boarding.screen_two.ScreenTwoFragment
 import com.mohfahmi.moneytracker.view_models.OnBoardingViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -30,7 +31,7 @@ class OnBoardingFragment : Fragment(R.layout.fragment_on_boarding) {
     private fun bindViews() {
         with(binding) {
             val viewPagerAdapter = ViewPagerAdapter(
-                arrayListOf(ScreenOneFragment(), ScreenTwoFragment()),
+                arrayListOf(ScreenOneFragment(), ScreenTwoFragment(), ScreenThirdFragment()),
                 requireActivity().supportFragmentManager,
                 lifecycle
             )
@@ -56,7 +57,7 @@ class OnBoardingFragment : Fragment(R.layout.fragment_on_boarding) {
                 positionOffsetPixels: Int
             ) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
-                if (position == binding.vpOnboarding.size) {
+                if (position == binding.vpOnboarding.size+1) {
                     binding.btnGetStarted.visibility = View.VISIBLE
                     binding.tvNext.visibility = View.INVISIBLE
                 } else {

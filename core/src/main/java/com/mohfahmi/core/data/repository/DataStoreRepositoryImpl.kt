@@ -16,4 +16,11 @@ class DataStoreRepositoryImpl(private val dataStoreSource: IDataStoreSource) : D
     }
 
     override fun readNameUserFromDataStore(): Flow<String> = dataStoreSource.readNameUser()
+
+    override suspend fun saveNotificationToDataStore(state: Boolean) {
+        dataStoreSource.saveNotificationState(state)
+    }
+
+    override fun readNotificationFromDataStore(): Flow<Boolean> =
+        dataStoreSource.readNotificationState()
 }

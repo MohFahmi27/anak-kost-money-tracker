@@ -23,11 +23,27 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
     private fun populateViews() {
         with(binding) {
             viewModel.getPercentageIncome.observe(viewLifecycleOwner) {
-                tvIncomePercentage.text = getString(R.string.money_percentage_income, it)
+                tvIncomePercentage.text = getString(R.string.money_percentage_income, it ?: 0f)
             }
-            viewModel.getPercentageExpense.observe(viewLifecycleOwner) {
-                tvExpensesPercentage.text = getString(R.string.money_percentage_expense, it)
-                pieChart.progress = it.roundToInt()
+            viewModel.getPercentageExpense.observe(viewLifecycleOwner) { expenseResult ->
+                tvExpensesPercentage.text =
+                    getString(R.string.money_percentage_expense, expenseResult ?: 0f)
+                statusUser(expenseResult.roundToInt())
+                pieChart.progress = expenseResult.roundToInt()
+            }
+        }
+    }
+
+    private fun statusUser(expense: Int) {
+        with(binding) {
+            if (expense > 50) {
+                tvStatus.text = getString(R.string.yout_did_what)
+                tvDescription.text = getString(R.string.text_description_failed)
+                imgStatus.setImageResource(R.drawable.ic_expense_large)
+            } else {
+                tvStatus.text = getString(R.string.you_did_a_good_job)
+                tvDescription.text = getString(R.string.text_description_success)
+                imgStatus.setImageResource(R.drawable.ic_expense_lower)
             }
         }
     }
