@@ -8,14 +8,8 @@ import com.mohfahmi.core.data.source.local.database.ILocalDataSource
 import com.mohfahmi.core.data.source.local.database.LocalDataSource
 import com.mohfahmi.core.domain.repository.ActivityRepository
 import com.mohfahmi.core.domain.repository.DataStoreRepository
-import com.mohfahmi.core.domain.use_case.AddUseCase
-import com.mohfahmi.core.domain.use_case.HomeUseCase
-import com.mohfahmi.core.domain.use_case.OnBoardingUseCase
-import com.mohfahmi.core.domain.use_case.SplashUseCase
-import com.mohfahmi.core.domain.use_case.interactors.AddInteractor
-import com.mohfahmi.core.domain.use_case.interactors.HomeInteractor
-import com.mohfahmi.core.domain.use_case.interactors.OnBoardingInteractor
-import com.mohfahmi.core.domain.use_case.interactors.SplashInteractor
+import com.mohfahmi.core.domain.use_case.*
+import com.mohfahmi.core.domain.use_case.interactors.*
 import com.mohfahmi.moneytracker.AppDataStore
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
@@ -32,4 +26,5 @@ val useCaseModule = module {
     factory<SplashUseCase> { SplashInteractor(get()) }
     factory<HomeUseCase> { HomeInteractor(get(), get()) }
     factory<AddUseCase> { AddInteractor(get()) }
+    factory<ArticleUseCase> { ArticleInteractor(get()) }
 }

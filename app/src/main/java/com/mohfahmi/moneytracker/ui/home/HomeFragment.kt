@@ -29,10 +29,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 tvHelloName.text = resources.getString(R.string.home, userName)
             }
             viewModel.getExpenses.observe(viewLifecycleOwner) { expenses ->
-                tvExpensesMain.text = getString(R.string.rp_placeholder, expenses ?: 0)
+                tvExpensesMain.text = getString(R.string.rp_placeholder, expenses)
             }
             viewModel.getIncome.observe(viewLifecycleOwner) { income ->
-                tvIncomeMain.text = getString(R.string.rp_placeholder, income ?: 0)
+                tvIncomeMain.text = getString(R.string.rp_placeholder, income)
             }
             val adapter = ActivityListAdapter { activityDomain ->
                 findNavController().navigate(

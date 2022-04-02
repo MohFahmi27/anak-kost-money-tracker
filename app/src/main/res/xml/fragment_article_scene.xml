@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:motionInterpolator="bounce">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/btn_minimize" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@id/guideline_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/guideline_center"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toBottomOf="@id/textView"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="@id/guideline_start"
+            android:id="@+id/materialCardView2"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@id/materialCardView2"
+            android:layout_marginBottom="32dp"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
+            motion:layout_constraintStart_toStartOf="@+id/appCompatImageView"
+            android:id="@+id/appCompatImageView2"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            motion:layout_constraintTop_toBottomOf="@+id/pieChart"
+            motion:layout_constraintStart_toStartOf="@+id/pieChart"
+            android:layout_marginTop="16dp"
+            android:id="@+id/appCompatImageView" />
+        <Constraint
+            android:id="@+id/pieChart"
+            motion:layout_constraintEnd_toEndOf="@+id/materialCardView2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/materialCardView2"
+            motion:layout_constraintVertical_bias="0.15"
+            motion:layout_constraintTop_toBottomOf="@+id/textView8"
+            motion:layout_constraintStart_toStartOf="@id/materialCardView2" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/pieChart"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            motion:layout_constraintStart_toStartOf="@id/materialCardView2"
+            motion:layout_constraintBottom_toBottomOf="@+id/materialCardView2"
+            motion:layout_constraintVertical_bias="0.25"
+            motion:layout_constraintTop_toBottomOf="@+id/textView8"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintEnd_toEndOf="@+id/textView8"
+            motion:layout_constraintHorizontal_bias="0.2" />
+        <Constraint
+            android:id="@+id/guideline_center"
+            motion:layout_constraintGuide_percent="0.35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Constraint
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:id="@+id/appCompatImageView"
+            motion:layout_constraintStart_toEndOf="@+id/pieChart"
+            motion:layout_constraintTop_toTopOf="@+id/materialCardView2"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/materialCardView2"
+            motion:layout_constraintVertical_bias="0.45" />
+        <Constraint
+            android:id="@+id/appCompatImageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintBottom_toBottomOf="@id/materialCardView2"
+            android:layout_marginBottom="@dimen/dp_16"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
+            motion:layout_constraintStart_toStartOf="@+id/appCompatImageView"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/tv_expenses_percentage"
+            motion:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+            motion:layout_constraintTop_toTopOf="@+id/appCompatImageView"
+            motion:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
+            motion:layout_constraintEnd_toEndOf="@+id/materialCardView2"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:id="@+id/tv_income_percentage"
+            motion:layout_constraintEnd_toEndOf="@+id/tv_expenses_percentage"
+            motion:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+            motion:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
+            motion:layout_constraintStart_toStartOf="@+id/tv_expenses_percentage" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@id/guideline_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/guideline_center"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toBottomOf="@id/textView"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="@id/guideline_start"
+            android:id="@+id/materialCardView2"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/imageview5"
+            motion:layout_constraintEnd_toEndOf="@id/pieChart"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            motion:layout_constraintBottom_toBottomOf="@id/pieChart"
+            motion:layout_constraintTop_toTopOf="@id/pieChart"
+            motion:layout_constraintStart_toStartOf="@id/pieChart" />
+    </ConstraintSet>
+</MotionScene>

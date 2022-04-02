@@ -14,6 +14,8 @@ class LocalDataSource(private val activityDao: ActivityDao) : ILocalDataSource {
 
     override fun getSumIncomeData(): Flow<Long> = activityDao.getSumIncome()
 
+    override fun getAllSumData(): Flow<Long> = activityDao.getSumAll()
+
     override suspend fun insertActivityData(activityEntity: ActivityEntity) {
         activityDao.insertActivity(activityEntity)
     }

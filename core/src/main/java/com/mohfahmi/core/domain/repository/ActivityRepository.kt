@@ -8,6 +8,7 @@ interface ActivityRepository {
     fun getActivityDetailData(id: Long): Flow<ActivityDomain>
     fun getSumExpensesData(): Flow<Long>
     fun getSumIncomeData(): Flow<Long>
+    fun getSumAllData(): Flow<Long>
     suspend fun insertActivityData(activityDomain: ActivityDomain)
     suspend fun updateActivityData(activityDomain: ActivityDomain)
     suspend fun deleteActivityData(activityDomain: ActivityDomain)

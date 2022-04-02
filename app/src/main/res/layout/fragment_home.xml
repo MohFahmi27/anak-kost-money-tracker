@@ -119,11 +119,11 @@
 
                         <TextView
                             android:id="@+id/tv_expenses_main"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp_4"
                             android:textColor="@color/primaryTextColor"
-                            android:textSize="20sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             tools:text="Rp. 120,000 .-" />
 
@@ -169,11 +169,11 @@
 
                         <TextView
                             android:id="@+id/tv_income_main"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp_4"
                             android:textColor="@color/primaryTextColor"
-                            android:textSize="20sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             tools:text="Rp. 120,000 .-" />
                     </LinearLayout>

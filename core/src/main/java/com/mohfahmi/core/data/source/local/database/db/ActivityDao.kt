@@ -18,6 +18,9 @@ interface ActivityDao {
     @Query("SELECT SUM(amount) FROM activity WHERE is_expenses=0")
     fun getSumIncome(): Flow<Long>
 
+    @Query("SELECT SUM(amount) FROM activity")
+    fun getSumAll(): Flow<Long>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertActivity(activityEntity: ActivityEntity)
 

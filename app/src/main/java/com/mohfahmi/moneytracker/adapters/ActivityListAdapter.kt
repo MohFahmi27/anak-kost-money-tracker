@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mohfahmi.core.domain.models.ActivityDomain
 import com.mohfahmi.moneytracker.R
 import com.mohfahmi.moneytracker.databinding.ItemsActivityUserBinding
+import com.mohfahmi.moneytracker.utils.toCurrencyFormat
 
 class ActivityListAdapter(private val clickListener: (ActivityDomain) -> Unit) :
     ListAdapter<ActivityDomain, ActivityListAdapter.ActivityListViewHolder>(DiffCallback) {
@@ -24,12 +25,15 @@ class ActivityListAdapter(private val clickListener: (ActivityDomain) -> Unit) :
                     imgCategories.setImageResource(R.drawable.ic_arrow_drop_down)
                     tvActivityTotal.text = itemView.context.getString(
                         R.string.rp_placeholder_expense,
-                        activityData.amount
+                        activityData.amount.toCurrencyFormat()
                     )
                 } else {
                     imgCategories.setImageResource(R.drawable.ic_arrow_up)
                     tvActivityTotal.text =
-                        itemView.context.getString(R.string.rp_placeholder_income, activityData.amount)
+                        itemView.context.getString(
+                            R.string.rp_placeholder_income,
+                            activityData.amount.toCurrencyFormat()
+                        )
                 }
             }
 

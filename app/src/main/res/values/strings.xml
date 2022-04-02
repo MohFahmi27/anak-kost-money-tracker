@@ -13,7 +13,7 @@
     <string name="home">%1$s</string>
     <string name="expenses">Expenses</string>
     <string name="income">Income</string>
-    <string name="latest_activity">Latest Activity</string>
+    <string name="latest_activity">Your Activity</string>
     <string name="welcome">Welcome</string>
     <string name="welcome_desc">Please insert your name to make this app as your companion</string>
     <string name="enter_your_name">Enter Your Name</string>
@@ -31,9 +31,15 @@
     <string name="delete">Delete</string>
     <string name="save">Save</string>
     <string name="rp">Rp</string>
-    <string name="rp_placeholder">Rp. %1$d.-</string>
-    <string name="rp_placeholder_income">+Rp. %1$d.-</string>
-    <string name="rp_placeholder_expense">-Rp. %1$d.-</string>
+    <string name="rp_placeholder">%1$s.-</string>
+    <string name="rp_placeholder_income">+%1$s.-</string>
+    <string name="rp_placeholder_expense">-%1$s.-</string>
+    <string name="your_stats">Your Stats</string>
+    <string name="money_percentage">Money Percentage:</string>
+    <string name="money_percentage_income">%.0f%% Income</string>
+    <string name="money_percentage_expense">%.0f%% Expense</string>
+    <string name="money_percentage_expense_ring">%.0f%%</string>
+    <string name="latest_news">Latest News</string>
     <string-array name="activity_categories">
         <item>@string/expenses</item>
         <item>@string/income</item>

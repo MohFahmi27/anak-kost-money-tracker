@@ -26,6 +26,8 @@ class ActivityRepositoryImpl(private val localDataSource: ILocalDataSource) : Ac
 
     override fun getSumIncomeData(): Flow<Long> = localDataSource.getSumIncomeData()
 
+    override fun getSumAllData(): Flow<Long> = localDataSource.getAllSumData()
+
     override suspend fun insertActivityData(activityDomain: ActivityDomain) {
         localDataSource.insertActivityData(activityDomain.mapToEntity())
     }
