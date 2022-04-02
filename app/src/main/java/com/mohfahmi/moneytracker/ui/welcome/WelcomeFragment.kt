@@ -4,12 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.viewbinding.library.fragment.viewBinding
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mohfahmi.moneytracker.R
 import com.mohfahmi.moneytracker.databinding.FragmentWelcomeBinding
 import com.mohfahmi.moneytracker.ui.MainActivity
 import com.mohfahmi.moneytracker.view_models.OnBoardingViewModel
+import com.shashank.sony.fancytoastlib.FancyToast
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
@@ -36,8 +36,13 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
                     )
                     requireActivity().finish()
                 } else {
-                    Toast.makeText(requireContext(), "Input Your Name First", Toast.LENGTH_SHORT)
-                        .show()
+                    FancyToast.makeText(
+                        requireContext(),
+                        "Input Your Name First",
+                        FancyToast.LENGTH_SHORT,
+                        FancyToast.DEFAULT,
+                        false
+                    )
                 }
             }
         }

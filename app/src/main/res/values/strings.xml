@@ -10,12 +10,38 @@
     <string name="home_button">Home Button</string>
     <string name="article_button">Article Button</string>
     <string name="user_button">User Button</string>
-    <string name="home">Home</string>
+    <string name="home">%1$s</string>
     <string name="expenses">Expenses</string>
     <string name="income">Income</string>
-    <string name="latest_activity">Latest Activity</string>
+    <string name="latest_activity">Your Activity</string>
     <string name="welcome">Welcome</string>
     <string name="welcome_desc">Please insert your name to make this app as your companion</string>
     <string name="enter_your_name">Enter Your Name</string>
     <string name="lets_go">Lets Go</string>
+    <string name="insert_button">Insert Button</string>
+    <string name="add_activity">Add Activity</string>
+    <string name="edit_activity">Edit Activity</string>
+    <string name="select_categories">Select Categories</string>
+    <string name="activity_name">Enter Activity Name</string>
+    <string name="amount">Amount</string>
+    <string name="activity_date">Activity Date</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="rp">Rp</string>
+    <string name="rp_placeholder">%1$s.-</string>
+    <string name="rp_placeholder_income">+%1$s.-</string>
+    <string name="rp_placeholder_expense">-%1$s.-</string>
+    <string name="your_stats">Your Stats</string>
+    <string name="money_percentage">Money Percentage:</string>
+    <string name="money_percentage_income">%.0f%% Income</string>
+    <string name="money_percentage_expense">%.0f%% Expense</string>
+    <string name="money_percentage_expense_ring">%.0f%%</string>
+    <string name="latest_news">Latest News</string>
+    <string-array name="activity_categories">
+        <item>@string/expenses</item>
+        <item>@string/income</item>
+    </string-array>
 </resources>

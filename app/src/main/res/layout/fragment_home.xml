@@ -7,6 +7,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/secondaryColor"
@@ -48,37 +49,50 @@
                     android:id="@+id/banner"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="-35dp"
+                    android:layout_marginBottom="-50dp"
                     android:background="@drawable/bg_main_banner"
                     app:layout_constraintBottom_toBottomOf="@+id/cardView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView1"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_16"
-                    android:text="@string/home"
+                    android:tint="@color/primaryTextColor"
+                    app:layout_constraintStart_toStartOf="@id/guideline_start"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_money" />
+
+                <TextView
+                    android:id="@+id/tv_hello_name"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dp_4"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/guideline_start"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="@+id/icon_textview"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/icon_textview"
+                    app:layout_constraintTop_toTopOf="@+id/icon_textview"
+                    tools:text="@tools:sample/full_names" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_24"
                     android:layout_marginEnd="@dimen/dp_8"
                     app:cardBackgroundColor="@color/primaryColor"
                     app:cardCornerRadius="@dimen/dp_8"
                     app:contentPadding="@dimen/dp_16"
                     app:layout_constraintEnd_toStartOf="@+id/guideline_center"
                     app:layout_constraintStart_toEndOf="@id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@id/textView1"
+                    app:layout_constraintTop_toBottomOf="@id/tv_hello_name"
                     app:strokeColor="@color/primaryTextColor"
                     app:strokeWidth="2dp">
 
@@ -105,11 +119,11 @@
 
                         <TextView
                             android:id="@+id/tv_expenses_main"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp_4"
                             android:textColor="@color/primaryTextColor"
-                            android:textSize="20sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             tools:text="Rp. 120,000 .-" />
 
@@ -155,11 +169,11 @@
 
                         <TextView
                             android:id="@+id/tv_income_main"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp_4"
                             android:textColor="@color/primaryTextColor"
-                            android:textSize="20sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             tools:text="Rp. 120,000 .-" />
                     </LinearLayout>
@@ -192,10 +206,24 @@
             android:id="@+id/rv_latest_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dp_16"
             android:layout_marginTop="@dimen/dp_16"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/items_activity_user" />
 
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:backgroundTint="@color/primaryColor"
+        android:contentDescription="@string/insert_button"
+        android:src="@drawable/ic_add"
+        app:borderWidth="3dp"
+        app:fabCustomSize="60dp"
+        app:layout_anchor="@id/main_app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:tint="@color/primaryTextColor" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

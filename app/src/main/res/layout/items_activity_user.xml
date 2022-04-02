@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_16"
+    android:layout_marginHorizontal="@dimen/dp_16"
     app:cardBackgroundColor="@color/secondaryLightColor"
-    app:cardCornerRadius="@dimen/dp_4">
+    app:cardElevation="4dp"
+    app:cardCornerRadius="@dimen/dp_8">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,10 +16,10 @@
 
         <View
             android:id="@+id/view1"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
             android:layout_marginVertical="@dimen/dp_16"
-            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_16"
             android:background="@drawable/bg_items_img"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,13 +27,13 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_categories"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="@id/view1"
             app:layout_constraintEnd_toEndOf="@id/view1"
             app:layout_constraintStart_toStartOf="@id/view1"
             app:layout_constraintTop_toTopOf="@id/view1"
-            app:srcCompat="@drawable/ic_shopping"
+            app:srcCompat="@drawable/ic_arrow_up"
             app:tint="@color/secondaryDarkColor" />
 
         <TextView
@@ -40,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_24"
             android:layout_marginTop="@dimen/dp_4"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/view1"
             app:layout_constraintTop_toTopOf="@id/view1"
@@ -52,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_4"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="@id/view1"
             app:layout_constraintStart_toStartOf="@id/tv_activity_items"
             app:layout_constraintTop_toBottomOf="@id/tv_activity_items"
@@ -61,7 +64,7 @@
             android:id="@+id/tv_activity_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_16"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

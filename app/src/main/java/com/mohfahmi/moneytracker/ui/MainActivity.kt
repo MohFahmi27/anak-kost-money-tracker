@@ -19,12 +19,9 @@ class MainActivity : AppCompatActivity() {
         bindViews()
     }
 
-    @SuppressLint("ClickableViewAccessibility")
     private fun bindViews() {
         with(binding) {
-            btnHome.setOnClick {
-                vpMain.findNavController().navigate(R.id.homeFragment)
-            }
+            btnHome.setOnClick { vpMain.findNavController().navigate(R.id.homeFragment) }
             btnArticle.setOnClick { vpMain.findNavController().navigate(R.id.articleFragment) }
             btnUser.setOnClick { vpMain.findNavController().navigate(R.id.profileFragment) }
         }

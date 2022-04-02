@@ -9,7 +9,12 @@
         android:id="@+id/homeFragment"
         android:name="com.mohfahmi.moneytracker.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addDataDialog"
+            app:destination="@id/addDataDialog"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.mohfahmi.moneytracker.ui.profile.ProfileFragment"
@@ -20,4 +25,13 @@
         android:name="com.mohfahmi.moneytracker.ui.article.ArticleFragment"
         android:label="fragment_article"
         tools:layout="@layout/fragment_article" />
+    <dialog
+        android:id="@+id/addDataDialog"
+        android:name="com.mohfahmi.moneytracker.ui.add_data.AddDataDialog"
+        android:label="dialog_bottom_sheet_add"
+        tools:layout="@layout/dialog_bottom_sheet_add" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </dialog>
 </navigation>

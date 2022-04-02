@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_name_welcome"
+        android:id="@+id/til_activity_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -77,11 +77,12 @@
         app:boxCornerRadiusTopStart="@dimen/dp_24"
         app:boxStrokeColor="@color/primaryColor"
         app:boxStrokeWidth="2dp"
-        app:startIconDrawable="@drawable/ic_user"
         app:layout_constraintBottom_toBottomOf="@+id/btn_lets_go"
         app:layout_constraintEnd_toStartOf="@+id/btn_lets_go"
         app:layout_constraintStart_toStartOf="@+id/guideline_start"
-        app:layout_constraintTop_toTopOf="@+id/btn_lets_go">
+        app:layout_constraintTop_toTopOf="@+id/btn_lets_go"
+        app:startIconDrawable="@drawable/ic_user"
+        app:startIconTint="@color/primaryColor">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tie_name_welcome"
