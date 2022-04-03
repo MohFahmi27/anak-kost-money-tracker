@@ -12,7 +12,7 @@
     <string name="home">%1$s</string>
     <string name="expenses">Expenses</string>
     <string name="income">Income</string>
-    <string name="latest_activity">Your Activity</string>
+    <string name="latest_activity">Your Activities</string>
     <string name="welcome">Welcome</string>
     <string name="welcome_desc">Please insert your name to make this app as your companion</string>
     <string name="enter_your_name">Enter Your Name</string>
@@ -38,12 +38,12 @@
     <string name="money_percentage_income">%.0f%% Income</string>
     <string name="money_percentage_expense">%.0f%% Expense</string>
     <string name="money_percentage_expense_ring">%.0f%%</string>
-    <string name="latest_news">Status Now</string>
+    <string name="latest_news">Latest News</string>
     <string name="daily_reminder">Daily Reminder</string>
     <string name="screen_text_third">Make tracking easy with notification to help you to track your money flow</string>
     <string name="you_did_a_good_job">You Did a Good Job !</string>
     <string name="yout_did_what">Bruh, You Better than This !</string>
-    <string name="text_description_success">Making your expense lower than your income is number 1 key for managing the your money</string>
+    <string name="text_description_success">Making your expense lower than your income is number 1 key for managing your money</string>
     <string name="text_description_failed">Making your expense higher will lead to disastrous money management, be careful!</string>
     <string name="greetings">Greetings,</string>
     <string name="notification">Notification</string>
@@ -55,6 +55,9 @@
     <string name="notify_content">%s, Reminder to Track Your Money Today</string>
     <string name="notify_channel_name">Daily Reminder</string>
     <string name="work_tag">DAILY UNIQUE WORK</string>
+    <string name="status_now">Status Now</string>
+    <string name="read_some_articles_about_financial">Read Some Articles About Financial</string>
+    <string name="something_went_wrong">Something Went Wrong Try Again Later\n%s</string>
 
     <string-array name="activity_categories">
         <item>@string/expenses</item>
