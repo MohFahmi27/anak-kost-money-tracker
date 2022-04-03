@@ -19,7 +19,17 @@ Coming SOON
 - Display how mmuch percentage of income and expense.
 - Daily Notification.
 - Articles from news api.
- 
+
+## Modularization
+This app consist of 2 modules:
+- `app:` module for presentation layer or UI layer
+- `core:` module consist of data and domain layer
+     
+## API
+for displaying articles i am using indonesia news api which you could find here:
+     
+[berita-indo-api](https://github.com/satyawikananda/berita-indo-api)
+     
 ## App Dependancies 
 This App main Dependancies includes:
 1. [Koin](https://insert-koin.io/) for dependancy injection.
