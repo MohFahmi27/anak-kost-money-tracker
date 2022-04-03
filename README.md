@@ -12,9 +12,8 @@ Komotrack (Kost Money Tracker) is a Simple Android Application to help you track
 </p>
      
 ## Demo App
-<p align="center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/194389429@N06/51979996444/in/dateposted-public/" title="demo_app"><img src="https://live.staticflickr.com/31337/51979996444_d045e34954_w.jpg" width="189" height="400" alt="demo_app"></a>
-</p>
+<video src='https://user-images.githubusercontent.com/50865350/161439856-9e24c3f5-a447-4e82-b73b-916204ec5840.mp4'/>  
+
 
 ## Fetures
 - Add, Update, Delete Activity.
