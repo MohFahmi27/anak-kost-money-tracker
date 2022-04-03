@@ -1,0 +1,16 @@
+package com.mohfahmi.core.domain.utils
+
+data class ResponseUiState<out T>(val status: Status, val data: T?, val message: String?) {
+    // since this will going to be use a lot, better to use using companion object I suppose
+    companion object {
+        // this class will help ui to recognize whether api response on loading, error, or success
+        fun <T> success(data: T): ResponseUiState<T> =
+            ResponseUiState(status = Status.SUCCESS, data = data, message = null)
+
+        fun <T> error(data: T?, message: String): ResponseUiState<T> =
+            ResponseUiState(status = Status.ERROR, data = data, message = message)
+
+        fun <T> loading(data: T?): ResponseUiState<T> =
+            ResponseUiState(status = Status.LOADING, data = data, message = null)
+    }
+}

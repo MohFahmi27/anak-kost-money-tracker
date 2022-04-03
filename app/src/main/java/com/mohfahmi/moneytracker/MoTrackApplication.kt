@@ -4,10 +4,7 @@ import android.app.Application
 import android.content.Context
 import androidx.datastore.preferences.preferencesDataStore
 import com.mohfahmi.core.data.source.local.data_store.PREFERENCE_NAME
-import com.mohfahmi.moneytracker.di.databaseModule
-import com.mohfahmi.moneytracker.di.repositoryModule
-import com.mohfahmi.moneytracker.di.useCaseModule
-import com.mohfahmi.moneytracker.di.viewModelModule
+import com.mohfahmi.moneytracker.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -23,6 +20,7 @@ class MoTrackApplication : Application() {
             androidLogger(Level.NONE)
             androidContext(this@MoTrackApplication)
             modules(listOf(
+                networkModule,
                 databaseModule,
                 repositoryModule,
                 useCaseModule,
