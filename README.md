@@ -18,7 +18,7 @@ Komotrack (Kost Money Tracker) is a Simple Android Application to help you track
 
 ## Fetures
 - Add, Update, Delete Activity.
-- Display how mmuch percentage of income and expense.
+- Display how much percentage of income and expense.
 - Daily Notification.
 - Articles from news api.
 
