@@ -1,0 +1,29 @@
+name: Upload APK to the Rootpk Store
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload:
+    name: Upload
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download release assets
+        uses: robinraju/release-downloader@v1.5
+        with: 
+          repository: "MohFahmi27/anak-kost-money-tracker" # change this
+          latest: true
+          fileName: "komotrack.apk" # change this
+          out-file-path: "assets"
+          #token: ${{ secrets.GITHUB_TOKEN }} # required if your repo is private
+      - name: Upload APK to the Rootpk Store
+        working-directory: ./assets/
+        env:
+          ROOTPK_APP_ID: ${{ secrets.ROOTPK_APP_ID }}
+          ROOTPK_APP_SECRET_KEY: ${{ secrets.ROOTPK_APP_SECRET_KEY }}
+        run: |
+          curl https://api.rootpk.com/apk/upload \
+            -F appId="$ROOTPK_APP_ID" \
+            -F secretKey="$ROOTPK_APP_SECRET_KEY" \
+            -F file=@myapp-armeabi-v7a-release.apk
