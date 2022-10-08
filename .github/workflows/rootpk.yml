@@ -24,6 +24,6 @@ jobs:
           ROOTPK_APP_SECRET_KEY: ${{ secrets.ROOTPK_APP_SECRET_KEY }}
         run: |
           curl https://api.rootpk.com/apk/upload \
-            -F appId="$ROOTPK_APP_ID" \
-            -F secretKey="$ROOTPK_APP_SECRET_KEY" \
+            -F appId="${{ secrets.ROOTPK_APP_ID }}" \
+            -F secretKey="${{ secrets.ROOTPK_APP_SECRET_KEY }}" \
             -F file=@komotrack.apk
