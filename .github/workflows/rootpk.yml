@@ -26,4 +26,4 @@ jobs:
           curl https://api.rootpk.com/apk/upload \
             -F appId="$ROOTPK_APP_ID" \
             -F secretKey="$ROOTPK_APP_SECRET_KEY" \
-            -F file=@myapp-armeabi-v7a-release.apk
+            -F file=@komotrack.apk
