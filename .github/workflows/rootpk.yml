@@ -16,7 +16,6 @@ jobs:
           latest: true
           fileName: "komotrack.apk" # change this
           out-file-path: "assets"
-          #token: ${{ secrets.GITHUB_TOKEN }} # required if your repo is private
       - name: Upload APK to the Rootpk Store
         working-directory: ./assets/
         env:
@@ -24,6 +23,6 @@ jobs:
           ROOTPK_APP_SECRET_KEY: ${{ secrets.ROOTPK_APP_SECRET_KEY }}
         run: |
           curl https://api.rootpk.com/apk/upload \
-            -F appId="${{ secrets.ROOTPK_APP_ID }}" \
-            -F secretKey="${{ secrets.ROOTPK_APP_SECRET_KEY }}" \
+            -F appId="$ROOTPK_APP_ID" \
+            -F secretKey="$ROOTPK_APP_SECRET_KEY" \
             -F file=@komotrack.apk
