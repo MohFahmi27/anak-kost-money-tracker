@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1097648962470",
+    "project_id": "anakkostmoneytracker",
+    "storage_bucket": "anakkostmoneytracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097648962470:android:381f3cb32de55397522d67",
+        "android_client_info": {
+          "package_name": "com.mohfahmi.moneytracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097648962470-ni6dia7vjh9lj1ni5qc324fk48vceh2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeiDTaHX61KU20jsnD6208h1WCyAJgh4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097648962470-ni6dia7vjh9lj1ni5qc324fk48vceh2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
